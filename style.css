@@ -94,3 +94,20 @@ button:focus {
 #transaction-area {
     display: none;
 }
+
+.deposit {
+    background-color: slateblue;
+}
+
+.balance {
+    background-color: lightsalmon;
+}
+
+.withdraw {
+    background-color: orange;
+}
+
+.status {
+    padding: 20px;
+    border-radius: 30px;
+}
