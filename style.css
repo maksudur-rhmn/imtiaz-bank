@@ -1,0 +1,96 @@
+/* 1.---------------------------------------------
+                Template default css
+------------------------------------------------*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    color: #303030;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    outline: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Slab', serif;
+    color: #303030;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'open sans', sans-serif;
+    font-size: 14px;
+    color: #999;
+    line-height: 1.8;
+}
+
+.btn.focus,
+.btn:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.overflow {
+    overflow-x: hidden;
+}
+
+.color_green {
+    color: #8dc63f;
+}
+
+/* 2.---------------------------------------------
+                Main css
+------------------------------------------------*/
+
+.submit-area {
+    box-shadow: 5px 5px 10px gray;
+}
+
+#transaction-area {
+    display: none;
+}
