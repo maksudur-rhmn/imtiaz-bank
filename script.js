@@ -25,32 +25,30 @@ loginBtn.addEventListener('click', function() {
    let depositAmount = document.getElementById('deposit-amount')
    let depositBtn = document.getElementById('deposit-btn')
    depositBtn.addEventListener('click', function(){
-       let currentDeposit = document.getElementById('current-deposit')
+       
+       updateSpanText('current-deposit', depositAmount)
        let currentBalance = document.getElementById('current-balance')
-       currentDeposit.innerText = parseFloat(currentDeposit.innerText) + parseFloat(depositAmount.value)
-       currentBalance.innerText = parseFloat(currentBalance.innerText) + parseFloat(currentDeposit.innerText)
+       currentBalance.innerText = parseFloat(currentBalance.innerText) + parseFloat(depositAmount.value)
+       document.getElementById('deposit-amount').value = ""
    })
 
    let withdrawAmount = document.getElementById('withdraw-amount')
    let withdrawBtn = document.getElementById('withdraw-btn')
    withdrawBtn.addEventListener('click', function(){
-      let currentWithdraw = document.getElementById('current-withdraw')
+
+      updateSpanText ('current-withdraw', withdrawAmount)
       let currentBalance = document.getElementById('current-balance')
-
-      if(parseFloat(currentBalance.innerText) >= parseFloat(withdrawAmount.value) )
-      {
-         currentWithdraw.innerText = parseFloat(currentWithdraw.innerText) + parseFloat(withdrawAmount.value)
-         currentBalance.innerText = parseFloat(currentBalance.innerText) - parseFloat(withdrawAmount.value)
-      }
-      else 
-      {
-          let outOfCash = document.getElementById('out-of-cash')
-          outOfCash.innerHTML = 'You do not have sufficient balance.Please try again later.'
-      }
-
+      currentBalance.innerText = parseFloat(currentBalance.innerText) - parseFloat(withdrawAmount.value)
+      document.getElementById('withdraw-amount').value = ""
       
-
    })
+
+   // Update SpanText Function 
+   function updateSpanText(secondId, amount)
+   {
+       let currentDeposit = document.getElementById(secondId)
+       currentDeposit.innerText = parseFloat(currentDeposit.innerText) + parseFloat(amount.value)
+   }
   
 })
 
